@@ -29,5 +29,5 @@ file {"/var/www/html/wordpress" :
 	group=>www-data,       
 	mode=>775}  
 
-exec {"service apache2 restart" :path=>'/usr/sbin'}
+exec {"service apache2 restart" : path=>'/usr/sbin'}
 }
