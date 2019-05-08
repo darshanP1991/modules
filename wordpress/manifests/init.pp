@@ -30,5 +30,5 @@ file {"/var/www/html/wordpress" :
 	mode=>'775'}  
 
 exec {"service apache2 restart" : 
-	path=>'/usr/sbin'}
+	path => ['/usr/sbin', '/usr/bin', '/bin', '/sbin'] }
 }
