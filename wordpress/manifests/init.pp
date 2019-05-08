@@ -25,9 +25,9 @@ exec {"wget https://gitlab.com/roybhaskar9/devops/raw/master/coding/chef/chefwor
 file {"/var/www/html/wordpress" :       
 	ensure=>present, 
 	recurse=>true,       
-	owner=>www-data,       
-	group=>www-data,       
-	mode=>775}  
+	owner=>'www-data',       
+	group=>'www-data',       
+	mode=>'775'}  
 
 exec {"service apache2 restart" : path=>'/usr/sbin'}
 }
