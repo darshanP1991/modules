@@ -1,0 +1,16 @@
+driftfile /var/lib/ntp/drift
+
+restrict default kod nomodify notrap nopeer noquery
+restrict -6 default kod nomodify notrap nopeer noquery
+
+restrict 127.0.0.1
+restrict -6 ::1
+
+server 0.<%= @operatingsystem %>.pool.ntp.org iburst
+server 1.<%= @operatingsystem %>.pool.ntp.org iburst
+server 2.<%= @operatingsystem %>.pool.ntp.org iburst
+server 3.<%= @operatingsystem %>.pool.ntp.org iburst
+
+includefile /etc/ntp/crypto/pw
+
+keys /etc/ntp/keys
