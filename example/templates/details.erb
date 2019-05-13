@@ -1,0 +1,6 @@
+"Hello world from "<%= @ipaddress %>
+<% if @osfamily == "RedHat" -%> 
+The operating system is Redhat 
+<% else -%> 
+The operating system is <%= @operatingsystem %>
+<% end -%>
